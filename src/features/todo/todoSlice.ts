@@ -5,7 +5,6 @@ import { v4 as uuid } from "uuid";
 export interface Task {
   id: string;
   text: string;
-  isCompleted: boolean;
 }
 
 export interface TodoState {
@@ -13,7 +12,7 @@ export interface TodoState {
 }
 
 const initialState: TodoState = {
-  tasks: [{ id: "iojsdifj", text: "task 1", isCompleted: false }],
+  tasks: [{ id: "iojsdifj", text: "task 1" }],
 };
 
 export const todoSlice = createSlice({
@@ -29,7 +28,6 @@ export const todoSlice = createSlice({
       const newTodo = {
         id: uuid(),
         text: action.payload,
-        isCompleted: false,
       };
 
       state.tasks.push(newTodo);
