@@ -12,7 +12,7 @@ export interface TodoState {
 }
 
 const initialState: TodoState = {
-  tasks: [{ id: "iojsdifj", text: "task 1" }],
+  tasks: [],
 };
 
 export const todoSlice = createSlice({
